@@ -1,0 +1,16 @@
+PODS:
+  - moa (10.0.0)
+
+DEPENDENCIES:
+  - moa (~> 10.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - moa
+
+SPEC CHECKSUMS:
+  moa: 95c863fd1059e6b5c7f6be30627823bb07ebca25
+
+PODFILE CHECKSUM: 5c33ce14015876741583c7c0eb8cc20c7c283c82
+
+COCOAPODS: 1.5.3

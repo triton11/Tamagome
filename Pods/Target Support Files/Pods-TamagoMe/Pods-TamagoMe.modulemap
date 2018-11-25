@@ -1,0 +1,6 @@
+framework module Pods_TamagoMe {
+  umbrella header "Pods-TamagoMe-umbrella.h"
+
+  export *
+  module * { export * }
+}

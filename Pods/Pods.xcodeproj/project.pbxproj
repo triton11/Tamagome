@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		008DC0F2FE79C7BFC4D879BA1B5DC205 /* MoaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45193DE252127816611BA89AA74E7331 /* MoaError.swift */; };
+		08D92EF7E4F41AB544B4E9AA6F3A635E /* moa-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1EA6CBBFC1B0A4C19C47BD32C1E99 /* moa-dummy.m */; };
+		0AED8056D1DC0D36CCB8F716C9265767 /* MoaTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67C99FB88AB2F4329C0A8CA8A805FB /* MoaTime.swift */; };
+		1D783CB21D7F1EF7A6033F5C719169B5 /* MoaImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D16A2A5CCA506767F4E3C77D3F973C3 /* MoaImageDownloader.swift */; };
+		319F62B0224271EA812A1BB649B999D2 /* MoaHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C93A57B5989748A90FE30562269377 /* MoaHttp.swift */; };
+		360638728870B066DF8A8FCDA720CB34 /* Moa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D0373B52EA71A8C5D54C87D20153 /* Moa.swift */; };
+		3FBEBEA2E8D7B6BEB1A5A244187336A5 /* moa-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 639F52FFAC4B2EA152D747C676FE176E /* moa-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B2C36B43CA7638423F1E7B69CF8493 /* MoaSimulatedImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F935E4FDE8B086DB8926A917BC5F07 /* MoaSimulatedImageDownloader.swift */; };
+		4C355444CE1222C6B9AF26F88CA53D99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		4C81B090597743F900AC24A4B57C4CB9 /* MoaLogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2799B65476FF4C0B2586F75BF182B2 /* MoaLogType.swift */; };
+		5530A3D1BF7E254313DE85335F07856B /* Pods-TamagoMe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 562B40B7F365FFF672E60B7297968C13 /* Pods-TamagoMe-dummy.m */; };
+		672AF6BB6EAC24163A92BE7FB96DBEBA /* MoaHttpImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739481AF26669E1C0FABCC596D90EC7E /* MoaHttpImageDownloader.swift */; };
+		80EC0D78EA7F4D01FE95A15A5ACE0005 /* Pods-TamagoMe-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 277C69FE4CCD9C798D0114B3FECA8D4B /* Pods-TamagoMe-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		908C24D45295429E27AFDB9603C8D144 /* MoaLoggerCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B654F6D35324928ADADFB08ACF6BC3B /* MoaLoggerCallback.swift */; };
+		91BCCEA16587A2C5AB023AB6FFC79C3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B925E0482978A6BE47850AF63F0276F2 /* MoaConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5907197B1DC1B86882DB617D1CAEF6 /* MoaConsoleLogger.swift */; };
+		C28069ADD6B2EC430E8356E3037FB3E4 /* MoaSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436B649F5F9730AC75ACF9FEAF5D9 /* MoaSimulator.swift */; };
+		D12A68FABF02D81AC79F9058529AB9B8 /* ImageView+moa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E242F5609EC3E078B7769F3423E251 /* ImageView+moa.swift */; };
+		E38E605035A4F5B1848B6180C28D2F9F /* MoaHttpSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA960907DF93F40B6C8083C6969046 /* MoaHttpSession.swift */; };
+		E66A80645271C71049DF879D0A00014E /* MoaSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ACE7A1803EE49D42224ECF2445555 /* MoaSettings.swift */; };
+		E931F727CA96520704C596952A2AFBF0 /* MoaString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B68AAA64643B2A396F32D1CC6A9505 /* MoaString.swift */; };
+		ED05D588E7B561F691E543F9ACA703A6 /* MoaSettingsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1FB59068C2B52D2A5463BF06CE0F9 /* MoaSettingsCache.swift */; };
+		F805B58C4A3ED36CFDE19EE5240ABC57 /* MoaHttpImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68454D6428C76DEF12EEB72FBC620F /* MoaHttpImage.swift */; };
+		F897DEBE5C6E65C13C17D7FCEA1739D2 /* MoaLoggerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0B71AB559E000EA23F559C3FFBCDA /* MoaLoggerText.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CA44C9A18189608C98DDCFF71B5DD86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A55B4218AE3647E81D54EB1623209735;
+			remoteInfo = moa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19FF53B5C64B9CF7648AE5FE30480207 /* Pods-TamagoMe-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TamagoMe-resources.sh"; sourceTree = "<group>"; };
+		1B35C939019FCB7D69402BD810ED2612 /* Pods-TamagoMe-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TamagoMe-acknowledgements.plist"; sourceTree = "<group>"; };
+		1BD1FB59068C2B52D2A5463BF06CE0F9 /* MoaSettingsCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaSettingsCache.swift; path = Moa/MoaSettingsCache.swift; sourceTree = "<group>"; };
+		277C69FE4CCD9C798D0114B3FECA8D4B /* Pods-TamagoMe-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TamagoMe-umbrella.h"; sourceTree = "<group>"; };
+		29A1D9969A7F401B0ADC1BDA96BB40BA /* Pods-TamagoMe-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TamagoMe-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2B2799B65476FF4C0B2586F75BF182B2 /* MoaLogType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaLogType.swift; path = Moa/Logger/MoaLogType.swift; sourceTree = "<group>"; };
+		2B654F6D35324928ADADFB08ACF6BC3B /* MoaLoggerCallback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaLoggerCallback.swift; path = Moa/Logger/MoaLoggerCallback.swift; sourceTree = "<group>"; };
+		3177479DBD4793F23ED371AC8D5F23DC /* moa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = moa.framework; path = moa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B68AAA64643B2A396F32D1CC6A9505 /* MoaString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaString.swift; path = Moa/Utils/MoaString.swift; sourceTree = "<group>"; };
+		3A5907197B1DC1B86882DB617D1CAEF6 /* MoaConsoleLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaConsoleLogger.swift; path = Moa/Logger/MoaConsoleLogger.swift; sourceTree = "<group>"; };
+		44E242F5609EC3E078B7769F3423E251 /* ImageView+moa.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+moa.swift"; path = "Moa/ImageView+moa.swift"; sourceTree = "<group>"; };
+		45193DE252127816611BA89AA74E7331 /* MoaError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaError.swift; path = Moa/Http/MoaError.swift; sourceTree = "<group>"; };
+		4E68454D6428C76DEF12EEB72FBC620F /* MoaHttpImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaHttpImage.swift; path = Moa/Http/MoaHttpImage.swift; sourceTree = "<group>"; };
+		562B40B7F365FFF672E60B7297968C13 /* Pods-TamagoMe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TamagoMe-dummy.m"; sourceTree = "<group>"; };
+		5713B256F23451FD815E551579509A30 /* Pods_TamagoMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TamagoMe.framework; path = "Pods-TamagoMe.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBA960907DF93F40B6C8083C6969046 /* MoaHttpSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaHttpSession.swift; path = Moa/Http/MoaHttpSession.swift; sourceTree = "<group>"; };
+		639F52FFAC4B2EA152D747C676FE176E /* moa-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "moa-umbrella.h"; sourceTree = "<group>"; };
+		64D0B71AB559E000EA23F559C3FFBCDA /* MoaLoggerText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaLoggerText.swift; path = Moa/Logger/MoaLoggerText.swift; sourceTree = "<group>"; };
+		725DA76872CC137A7E7132857D95DD8D /* Pods-TamagoMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TamagoMe.release.xcconfig"; sourceTree = "<group>"; };
+		739481AF26669E1C0FABCC596D90EC7E /* MoaHttpImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaHttpImageDownloader.swift; path = Moa/Http/MoaHttpImageDownloader.swift; sourceTree = "<group>"; };
+		8B3D410FC6082D58B30BBA4107B47F95 /* moa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = moa.xcconfig; sourceTree = "<group>"; };
+		8DD7D0373B52EA71A8C5D54C87D20153 /* Moa.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Moa.swift; path = Moa/Moa.swift; sourceTree = "<group>"; };
+		932ACE7A1803EE49D42224ECF2445555 /* MoaSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaSettings.swift; path = Moa/MoaSettings.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96CFD077120691BF1A6BA791A44681C1 /* Pods-TamagoMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TamagoMe.debug.xcconfig"; sourceTree = "<group>"; };
+		9D16A2A5CCA506767F4E3C77D3F973C3 /* MoaImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaImageDownloader.swift; path = Moa/MoaImageDownloader.swift; sourceTree = "<group>"; };
+		9D6436B649F5F9730AC75ACF9FEAF5D9 /* MoaSimulator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaSimulator.swift; path = Moa/Simulator/MoaSimulator.swift; sourceTree = "<group>"; };
+		9FB65035F23242BD06B7BA981A025863 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A24B299FA79EC2469FE1BB6F91CA43A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C93A57B5989748A90FE30562269377 /* MoaHttp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaHttp.swift; path = Moa/Http/MoaHttp.swift; sourceTree = "<group>"; };
+		B2F935E4FDE8B086DB8926A917BC5F07 /* MoaSimulatedImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaSimulatedImageDownloader.swift; path = Moa/Simulator/MoaSimulatedImageDownloader.swift; sourceTree = "<group>"; };
+		B4BA5A452CA43B2DA983C7444FFA6004 /* Pods-TamagoMe-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TamagoMe-frameworks.sh"; sourceTree = "<group>"; };
+		B87F3A567EAA32558DB03541E91CF476 /* moa.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = moa.modulemap; sourceTree = "<group>"; };
+		D0E1EA6CBBFC1B0A4C19C47BD32C1E99 /* moa-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "moa-dummy.m"; sourceTree = "<group>"; };
+		D465A448E9266080AD0DBA1F6EA6F746 /* moa-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "moa-prefix.pch"; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F7673A4DA1166EEA74F49596C474B49D /* Pods-TamagoMe.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TamagoMe.modulemap"; sourceTree = "<group>"; };
+		FC67C99FB88AB2F4329C0A8CA8A805FB /* MoaTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoaTime.swift; path = Moa/Utils/MoaTime.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F8BB42A9F941A91BEFBD3E27EF235DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91BCCEA16587A2C5AB023AB6FFC79C3D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A010B0D778731FDA99E06797FD47AC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C355444CE1222C6B9AF26F88CA53D99 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F176FC2617237578EFB29CDCCEAF6F56 /* Pods */,
+				B54B20283F1E88284B5565DFFF1326F0 /* Products */,
+				B1BDB11D055AF29E79CAE8C54F20BF15 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B1084417324A82DF94156C538EE269E /* moa */ = {
+			isa = PBXGroup;
+			children = (
+				44E242F5609EC3E078B7769F3423E251 /* ImageView+moa.swift */,
+				8DD7D0373B52EA71A8C5D54C87D20153 /* Moa.swift */,
+				3A5907197B1DC1B86882DB617D1CAEF6 /* MoaConsoleLogger.swift */,
+				45193DE252127816611BA89AA74E7331 /* MoaError.swift */,
+				A5C93A57B5989748A90FE30562269377 /* MoaHttp.swift */,
+				4E68454D6428C76DEF12EEB72FBC620F /* MoaHttpImage.swift */,
+				739481AF26669E1C0FABCC596D90EC7E /* MoaHttpImageDownloader.swift */,
+				5CBA960907DF93F40B6C8083C6969046 /* MoaHttpSession.swift */,
+				9D16A2A5CCA506767F4E3C77D3F973C3 /* MoaImageDownloader.swift */,
+				2B654F6D35324928ADADFB08ACF6BC3B /* MoaLoggerCallback.swift */,
+				64D0B71AB559E000EA23F559C3FFBCDA /* MoaLoggerText.swift */,
+				2B2799B65476FF4C0B2586F75BF182B2 /* MoaLogType.swift */,
+				932ACE7A1803EE49D42224ECF2445555 /* MoaSettings.swift */,
+				1BD1FB59068C2B52D2A5463BF06CE0F9 /* MoaSettingsCache.swift */,
+				B2F935E4FDE8B086DB8926A917BC5F07 /* MoaSimulatedImageDownloader.swift */,
+				9D6436B649F5F9730AC75ACF9FEAF5D9 /* MoaSimulator.swift */,
+				35B68AAA64643B2A396F32D1CC6A9505 /* MoaString.swift */,
+				FC67C99FB88AB2F4329C0A8CA8A805FB /* MoaTime.swift */,
+				B872D7C5F7F6E2AF4150DB3C5828C2EA /* Support Files */,
+			);
+			name = moa;
+			path = moa;
+			sourceTree = "<group>";
+		};
+		9504D1CFAC87AB3AD80B8DE7A2CE6714 /* Pods-TamagoMe */ = {
+			isa = PBXGroup;
+			children = (
+				A24B299FA79EC2469FE1BB6F91CA43A8 /* Info.plist */,
+				F7673A4DA1166EEA74F49596C474B49D /* Pods-TamagoMe.modulemap */,
+				29A1D9969A7F401B0ADC1BDA96BB40BA /* Pods-TamagoMe-acknowledgements.markdown */,
+				1B35C939019FCB7D69402BD810ED2612 /* Pods-TamagoMe-acknowledgements.plist */,
+				562B40B7F365FFF672E60B7297968C13 /* Pods-TamagoMe-dummy.m */,
+				B4BA5A452CA43B2DA983C7444FFA6004 /* Pods-TamagoMe-frameworks.sh */,
+				19FF53B5C64B9CF7648AE5FE30480207 /* Pods-TamagoMe-resources.sh */,
+				277C69FE4CCD9C798D0114B3FECA8D4B /* Pods-TamagoMe-umbrella.h */,
+				96CFD077120691BF1A6BA791A44681C1 /* Pods-TamagoMe.debug.xcconfig */,
+				725DA76872CC137A7E7132857D95DD8D /* Pods-TamagoMe.release.xcconfig */,
+			);
+			name = "Pods-TamagoMe";
+			path = "Target Support Files/Pods-TamagoMe";
+			sourceTree = "<group>";
+		};
+		B1BDB11D055AF29E79CAE8C54F20BF15 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9504D1CFAC87AB3AD80B8DE7A2CE6714 /* Pods-TamagoMe */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B54B20283F1E88284B5565DFFF1326F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3177479DBD4793F23ED371AC8D5F23DC /* moa.framework */,
+				5713B256F23451FD815E551579509A30 /* Pods_TamagoMe.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B872D7C5F7F6E2AF4150DB3C5828C2EA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FB65035F23242BD06B7BA981A025863 /* Info.plist */,
+				B87F3A567EAA32558DB03541E91CF476 /* moa.modulemap */,
+				8B3D410FC6082D58B30BBA4107B47F95 /* moa.xcconfig */,
+				D0E1EA6CBBFC1B0A4C19C47BD32C1E99 /* moa-dummy.m */,
+				D465A448E9266080AD0DBA1F6EA6F746 /* moa-prefix.pch */,
+				639F52FFAC4B2EA152D747C676FE176E /* moa-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/moa";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F176FC2617237578EFB29CDCCEAF6F56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B1084417324A82DF94156C538EE269E /* moa */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C4398A87801D8618C365409B1DDAC9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80EC0D78EA7F4D01FE95A15A5ACE0005 /* Pods-TamagoMe-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6488614C872279A3A7428157D530452C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBEBEA2E8D7B6BEB1A5A244187336A5 /* moa-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		43FBE3F1366F7017D6F49A65F97E65A8 /* Pods-TamagoMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CACA36FDEA1119CD983073ECE27F93C9 /* Build configuration list for PBXNativeTarget "Pods-TamagoMe" */;
+			buildPhases = (
+				2C4398A87801D8618C365409B1DDAC9B /* Headers */,
+				38C3A4598DF87376DB79C48EBB025B39 /* Sources */,
+				A010B0D778731FDA99E06797FD47AC0A /* Frameworks */,
+				8B906ADEDB4CE7CCF359B245406DDEB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44038EBDBDA2ECC04670A9EB0E081A53 /* PBXTargetDependency */,
+			);
+			name = "Pods-TamagoMe";
+			productName = "Pods-TamagoMe";
+			productReference = 5713B256F23451FD815E551579509A30 /* Pods_TamagoMe.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A55B4218AE3647E81D54EB1623209735 /* moa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F235DBB57B40F4CC76C1E4B2F57BADD /* Build configuration list for PBXNativeTarget "moa" */;
+			buildPhases = (
+				6488614C872279A3A7428157D530452C /* Headers */,
+				667F60D5CF134BBB4458530BC6817CF4 /* Sources */,
+				0F8BB42A9F941A91BEFBD3E27EF235DF /* Frameworks */,
+				8F18277AC29C6AAB5642A3D5F7DB14A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = moa;
+			productName = moa;
+			productReference = 3177479DBD4793F23ED371AC8D5F23DC /* moa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B54B20283F1E88284B5565DFFF1326F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A55B4218AE3647E81D54EB1623209735 /* moa */,
+				43FBE3F1366F7017D6F49A65F97E65A8 /* Pods-TamagoMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B906ADEDB4CE7CCF359B245406DDEB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F18277AC29C6AAB5642A3D5F7DB14A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38C3A4598DF87376DB79C48EBB025B39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5530A3D1BF7E254313DE85335F07856B /* Pods-TamagoMe-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		667F60D5CF134BBB4458530BC6817CF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12A68FABF02D81AC79F9058529AB9B8 /* ImageView+moa.swift in Sources */,
+				08D92EF7E4F41AB544B4E9AA6F3A635E /* moa-dummy.m in Sources */,
+				360638728870B066DF8A8FCDA720CB34 /* Moa.swift in Sources */,
+				B925E0482978A6BE47850AF63F0276F2 /* MoaConsoleLogger.swift in Sources */,
+				008DC0F2FE79C7BFC4D879BA1B5DC205 /* MoaError.swift in Sources */,
+				319F62B0224271EA812A1BB649B999D2 /* MoaHttp.swift in Sources */,
+				F805B58C4A3ED36CFDE19EE5240ABC57 /* MoaHttpImage.swift in Sources */,
+				672AF6BB6EAC24163A92BE7FB96DBEBA /* MoaHttpImageDownloader.swift in Sources */,
+				E38E605035A4F5B1848B6180C28D2F9F /* MoaHttpSession.swift in Sources */,
+				1D783CB21D7F1EF7A6033F5C719169B5 /* MoaImageDownloader.swift in Sources */,
+				908C24D45295429E27AFDB9603C8D144 /* MoaLoggerCallback.swift in Sources */,
+				F897DEBE5C6E65C13C17D7FCEA1739D2 /* MoaLoggerText.swift in Sources */,
+				4C81B090597743F900AC24A4B57C4CB9 /* MoaLogType.swift in Sources */,
+				E66A80645271C71049DF879D0A00014E /* MoaSettings.swift in Sources */,
+				ED05D588E7B561F691E543F9ACA703A6 /* MoaSettingsCache.swift in Sources */,
+				49B2C36B43CA7638423F1E7B69CF8493 /* MoaSimulatedImageDownloader.swift in Sources */,
+				C28069ADD6B2EC430E8356E3037FB3E4 /* MoaSimulator.swift in Sources */,
+				E931F727CA96520704C596952A2AFBF0 /* MoaString.swift in Sources */,
+				0AED8056D1DC0D36CCB8F716C9265767 /* MoaTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44038EBDBDA2ECC04670A9EB0E081A53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = moa;
+			target = A55B4218AE3647E81D54EB1623209735 /* moa */;
+			targetProxy = 2CA44C9A18189608C98DDCFF71B5DD86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1070DCBED3CF20B23824E511142834BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3D410FC6082D58B30BBA4107B47F95 /* moa.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/moa/moa-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/moa/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/moa/moa.modulemap";
+				PRODUCT_MODULE_NAME = moa;
+				PRODUCT_NAME = moa;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		16BC524EDE752B9BB72D7E267116A89A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1DF68876DF2AD07A12482477C1AA7DB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5E60FB34993F6B667CBEE304CB4E5FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3D410FC6082D58B30BBA4107B47F95 /* moa.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/moa/moa-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/moa/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/moa/moa.modulemap";
+				PRODUCT_MODULE_NAME = moa;
+				PRODUCT_NAME = moa;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6F5A8922FEBD27A6046F12212B2EAA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 725DA76872CC137A7E7132857D95DD8D /* Pods-TamagoMe.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TamagoMe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TamagoMe/Pods-TamagoMe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6FB82D4E0741112E2B669C884A4D162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96CFD077120691BF1A6BA791A44681C1 /* Pods-TamagoMe.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TamagoMe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TamagoMe/Pods-TamagoMe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16BC524EDE752B9BB72D7E267116A89A /* Debug */,
+				1DF68876DF2AD07A12482477C1AA7DB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F235DBB57B40F4CC76C1E4B2F57BADD /* Build configuration list for PBXNativeTarget "moa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E60FB34993F6B667CBEE304CB4E5FF1 /* Debug */,
+				1070DCBED3CF20B23824E511142834BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CACA36FDEA1119CD983073ECE27F93C9 /* Build configuration list for PBXNativeTarget "Pods-TamagoMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6FB82D4E0741112E2B669C884A4D162 /* Debug */,
+				A6F5A8922FEBD27A6046F12212B2EAA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
