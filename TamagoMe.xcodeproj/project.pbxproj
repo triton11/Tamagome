@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E08BF8221BA06410022018C /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E08BF8121BA06410022018C /* LogViewController.swift */; };
 		6E0C691C21A9DB6500DB3B99 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0C691B21A9DB6500DB3B99 /* HealthKit.framework */; };
 		6E0C691F21A9DC5500DB3B99 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C691E21A9DC5500DB3B99 /* HealthKitSetupAssistant.swift */; };
 		6E22025021A64FA700C41335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22024F21A64FA700C41335 /* AppDelegate.swift */; };
@@ -14,12 +15,16 @@
 		6E22025521A64FA700C41335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E22025321A64FA700C41335 /* Main.storyboard */; };
 		6E22025721A64FA900C41335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E22025621A64FA900C41335 /* Assets.xcassets */; };
 		6E22025A21A64FA900C41335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E22025821A64FA900C41335 /* LaunchScreen.storyboard */; };
+		6E599BB121BA1C4300140733 /* LogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E599BB021BA1C4300140733 /* LogItem.swift */; };
+		6E599BB321BA598E00140733 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E599BB221BA598E00140733 /* PlayViewController.swift */; };
+		6E599BB521BA5C7700140733 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E599BB421BA5C7700140733 /* Scene.swift */; };
 		E884E7185E07448594095FB4 /* Pods_TamagoMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A957C2B004F193727358A20 /* Pods_TamagoMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A957C2B004F193727358A20 /* Pods_TamagoMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TamagoMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9C59ADDBB1225F0D6F0CC7 /* Pods-TamagoMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamagoMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TamagoMe/Pods-TamagoMe.release.xcconfig"; sourceTree = "<group>"; };
+		6E08BF8121BA06410022018C /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		6E0C691B21A9DB6500DB3B99 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		6E0C691D21A9DB6500DB3B99 /* TamagoMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TamagoMe.entitlements; sourceTree = "<group>"; };
 		6E0C691E21A9DC5500DB3B99 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
@@ -30,6 +35,9 @@
 		6E22025621A64FA900C41335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E22025921A64FA900C41335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E22025B21A64FA900C41335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E599BB021BA1C4300140733 /* LogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogItem.swift; sourceTree = "<group>"; };
+		6E599BB221BA598E00140733 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		6E599BB421BA5C7700140733 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		BBAF7814AA8D537AED4D9AE2 /* Pods-TamagoMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamagoMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TamagoMe/Pods-TamagoMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +101,10 @@
 				6E22025621A64FA900C41335 /* Assets.xcassets */,
 				6E22025821A64FA900C41335 /* LaunchScreen.storyboard */,
 				6E22025B21A64FA900C41335 /* Info.plist */,
+				6E08BF8121BA06410022018C /* LogViewController.swift */,
+				6E599BB021BA1C4300140733 /* LogItem.swift */,
+				6E599BB221BA598E00140733 /* PlayViewController.swift */,
+				6E599BB421BA5C7700140733 /* Scene.swift */,
 			);
 			path = TamagoMe;
 			sourceTree = "<group>";
@@ -214,9 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E599BB121BA1C4300140733 /* LogItem.swift in Sources */,
 				6E0C691F21A9DC5500DB3B99 /* HealthKitSetupAssistant.swift in Sources */,
 				6E22025221A64FA700C41335 /* ViewController.swift in Sources */,
 				6E22025021A64FA700C41335 /* AppDelegate.swift in Sources */,
+				6E599BB521BA5C7700140733 /* Scene.swift in Sources */,
+				6E599BB321BA598E00140733 /* PlayViewController.swift in Sources */,
+				6E08BF8221BA06410022018C /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

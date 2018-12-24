@@ -11,7 +11,9 @@ import HealthKit
 import moa
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var currentLvel: UILabel!
+    
     @IBOutlet weak var prof: UIImageView!
     
     @IBOutlet weak var fitness: UISlider!
@@ -21,11 +23,13 @@ class ViewController: UIViewController {
     
     var nameHash = 0
     
+    var buttonPressed = 0
+    
     var predicate : NSPredicate? = nil
     
     let eyes = ["eyes1","eyes10","eyes2","eyes3","eyes4","eyes5","eyes6","eyes7","eyes9"]
     let nose = ["nose2","nose3","nose4","nose5","nose6","nose7","nose8","nose9"]
-    let mouth = ["mouth1","mouth10","mouth11","mouth3","mouth5","mouth6","mouth7","mouth9"]
+    let mouth = ["mouth7","mouth3","mouth1","mouth5","mouth6","mouth11","mouth9"]
     
     var mindfulTime = [Date: Double]()
     var sleepTime = [Date: Double]()
@@ -42,22 +46,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        nameHash = UIDevice.current.name.hashValue
-        print(nameHash)
-        let eyesId = nameHash % eyes.count
-        let noseId = (nameHash/100) % nose.count
-        let mouthId = 0
-        let hexColor = String.init(format: "%06X", (0xFFFFFF & (nameHash)%16777215));
-        let url = "https://api.adorable.io/avatars/face/"+eyes[eyesId]+"/"+nose[noseId]+"/"+mouth[mouthId]+"/"+hexColor+"/300"
-        print(url)
-        Moa.logger = MoaConsoleLogger
-        prof.moa.url = url
         
-        prof.moa.onSuccess = { image in
-            self.prof.layer.cornerRadius = 25.0
-            self.prof.clipsToBounds = true
-            return image
-        }
         
         HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
             
@@ -81,8 +70,71 @@ class ViewController: UIViewController {
             self.setMindfulnessValues()
             self.setSleepValues()
         }
+        var level = 0;
+        if (UserDefaults.standard.integer(forKey: "level") != 0) {
+            level = UserDefaults.standard.integer(forKey: "level")
+        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        let now = NSDate()
+        let components = NSCalendar.current.dateComponents([.year, .month, .day], from: now as Date)
         
+        guard let startDate = NSCalendar.current.date(from: components) else {
+            fatalError("*** Unable to create the start date ***")
+        }
+        let today = formatter.string(from: startDate)
+        if (Int(today)! > UserDefaults.standard.integer(forKey: "date")) {
+            UserDefaults.standard.removeObject(forKey: "date")
+            UserDefaults.standard.set(Int(today), forKey: "date")
+            
+            let oldLevel = UserDefaults.standard.integer(forKey: "level")
+            UserDefaults.standard.removeObject(forKey: "level")
+            UserDefaults.standard.set(oldLevel + 1, forKey: "level")
+            level = oldLevel + 1
+        }
+        currentLvel.text = "Level: " + String(level)
+    }
+    
+    func callMoa(mouthId: Int) {
+        nameHash = 0
+        print(UIDevice.current.name)
+        let name = UIDevice.current.name.prefix(8).utf8
+        var mult = 1
+        for k in name {
+            nameHash += Int(k) * mult
+            mult = mult*10
+        }
+        print(nameHash)
+        let eyesId = nameHash % eyes.count
+        let noseId = (nameHash/100) % nose.count
+        let hexColor = String.init(format: "%06X", (0xFFFFFF & (nameHash)%16777215));
+        let url = "https://api.adorable.io/avatars/face/"+eyes[eyesId]+"/"+nose[noseId]+"/"+mouth[mouthId]+"/"+hexColor+"/300"
+        print(url)
+        Moa.logger = MoaConsoleLogger
+        prof.moa.url = url
         
+        prof.moa.onSuccess = { image in
+            self.prof.layer.cornerRadius = 25.0
+            self.prof.clipsToBounds = true
+            
+            // get the documents directory url
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            // choose a name for your image
+            let fileName = "image.jpg"
+            // create the destination file url to save your image
+            let fileURL = documentsDirectory.appendingPathComponent(fileName)
+            // get your UIImage jpeg data representation and check if the destination file url already exists
+            if let data = UIImageJPEGRepresentation(image, 1.0) {
+                do {
+                    // writes the image data to disk
+                    try data.write(to: fileURL)
+                    print("file saved")
+                } catch {
+                    print("error saving file:", error)
+                }
+            }
+            return image
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,14 +146,14 @@ class ViewController: UIViewController {
         let calendar = NSCalendar.current
         let now = NSDate()
         let components = calendar.dateComponents([.year, .month, .day], from: now as Date)
-        
         guard let startDate = calendar.date(from: components) else {
             fatalError("*** Unable to create the start date ***")
         }
+        let updatedStart = calendar.date(byAdding: .day, value: -1, to: startDate)
         
-        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: updatedStart!)
         
-        predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
+        predicate = HKQuery.predicateForSamples(withStart: updatedStart, end: endDate, options: [])
         
     }
     
@@ -128,6 +180,7 @@ class ViewController: UIViewController {
                 }
                 self.nutritionScore = Double.minimum(score/2000.0, 1.0)
                 self.nutrition.setValue(Float(self.nutritionScore), animated: false)
+                self.checkLife()
                 
             }
         }
@@ -156,6 +209,7 @@ class ViewController: UIViewController {
                 }
                 self.workoutScore = Double.minimum(score/8.0, 1.0)
                 self.fitness.setValue(Float(self.workoutScore), animated: false)
+                self.checkLife()
                 
             }
         }
@@ -165,6 +219,7 @@ class ViewController: UIViewController {
     func setSleepValues() {
         // first, we define the object type we want
         if let sleepType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis) {
+            
             
             // Use a sortDescriptor to get the recent data first
             let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
@@ -188,12 +243,15 @@ class ViewController: UIViewController {
                             self.sleepTime[sample.startDate] = Double(dif!)
                         }
                     }
-                    var score = 0.0
-                    for (_, v) in self.sleepTime {
-                        score += v
-                    }
+                }
+                var score = 0.0
+                for (_, v) in self.sleepTime {
+                    score += v
+                }
+                DispatchQueue.main.async() {
                     self.sleepScore = Double.minimum(score/8.0, 1.0)
                     self.sleep.setValue(Float(self.sleepScore), animated: false)
+                    self.checkLife()
                 }
             }
             
@@ -227,17 +285,96 @@ class ViewController: UIViewController {
                             self.mindfulTime[sample.startDate] = Double(dif!)
                         }
                     }
-                    var score = 0.0
-                    for (_, v) in self.mindfulTime {
-                        score += v
-                    }
+                }
+                var score = 0.0
+                for (_, v) in self.mindfulTime {
+                    score += v
+                }
+                DispatchQueue.main.async() {
                     self.mindScore = Double.minimum(score/2.0, 1.0)
                     self.mind.setValue(Float(self.mindScore), animated: false)
+                    self.checkLife()
                 }
             }
             
             // finally, we execute our query
             healthStore.execute(query)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "fitness") {
+            let secondViewController = segue.destination as! LogViewController
+            var arr: [LogItem] = []
+            for (key, value) in workoutMiles {
+                let l = LogItem()
+                l.date = key
+                l.value = value
+                l.type = "Fitness"
+                arr.append(l)
+            }
+            secondViewController.cellType = "Fitness"
+            secondViewController.cells = arr
+        } else if (segue.identifier == "sleep") {
+            let secondViewController = segue.destination as! LogViewController
+            var arr: [LogItem] = []
+            for (key, value) in sleepTime {
+                let l = LogItem()
+                l.date = key
+                l.value = value
+                l.type = "Sleep"
+                arr.append(l)
+            }
+            secondViewController.cellType = "Sleep"
+            secondViewController.cells = arr
+        } else if (segue.identifier == "nutrition") {
+            let secondViewController = segue.destination as! LogViewController
+            var arr: [LogItem] = []
+            for (key, value) in nutritionCalories {
+                let l = LogItem()
+                l.date = key
+                l.value = value
+                l.type = "Nutrition"
+                arr.append(l)
+            }
+            secondViewController.cellType = "Nutrition"
+            secondViewController.cells = arr
+        } else if (segue.identifier == "mind") {
+            let secondViewController = segue.destination as! LogViewController
+            var arr: [LogItem] = []
+            for (key, value) in mindfulTime {
+                let l = LogItem()
+                l.date = key
+                l.value = value
+                l.type = "Mind"
+                arr.append(l)
+            }
+            secondViewController.cellType = "Mind"
+            secondViewController.cells = arr
+        }
+    }
+    
+    func checkLife() {
+        if (mindScore + workoutScore + nutritionScore + mindScore < 1.0) {
+            currentLvel.text = "DEAD :("
+            UserDefaults.standard.removeObject(forKey: "level")
+            UserDefaults.standard.set(0, forKey: "level")
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 1.3) {
+            callMoa(mouthId: 0)
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 1.7) {
+            callMoa(mouthId: 1)
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 2) {
+            print(mindScore, workoutScore, nutritionScore, mindScore)
+            callMoa(mouthId: 2)
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 2.5) {
+            print(mindScore, workoutScore, nutritionScore, mindScore)
+            callMoa(mouthId: 3)
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 3.0) {
+            callMoa(mouthId: 4)
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 3.5) {
+            callMoa(mouthId: 5)
+        } else if (mindScore + workoutScore + nutritionScore + mindScore < 4.0) {
+            callMoa(mouthId: 6)
         }
     }
     
