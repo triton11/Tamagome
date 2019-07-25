@@ -7,7 +7,7 @@ Features:
 - Play with your avatar in an Augmented Reality environment.
 - Be motivated to stay healthy and keep your avatar happy!
 
-<img src="https://github.com/triton11/Tamagome/img/welcome.png" alt="Welcome Screen" width="200"/>
+<img src="https://github.com/triton11/Tamagome/blob/master/img/welcome.png" alt="Welcome Screen" width="200"/>
 
-![Play in AR](/img/ar.png | width=200)
+<img src="https://github.com/triton11/Tamagome/blob/master/img/ar.png" alt="AR" width="200"/>
 
